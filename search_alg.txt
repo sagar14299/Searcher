@@ -1,0 +1,27 @@
+THINGS NEEDED TO BE DONE:
+
+should be able to get text from clipboard
+find all emails and phone numbers
+store it to clipboard as string line by line
+
+HOW TO DO IT :
+
+have modules for regular expression and clipboard-->get copy of module on same folder
+get the text
+have a class to put that to
+have different class for email and numbers
+for email :
+should search for words@word.word(.word {optional})
+e.g : name@email.com.np or name@mail.com
+for ph-num :
+should search for 3 nums(optional) as postal code and have either : 4num-3num-3num or : 10nums
+for landline :
+should search for 1 to 2 nums as postal code and have nums that range from 5 to 6
+e.g:
++977-1-4780299
+
++977-9801-200-111
+
++977-9801-200-101
+
+9845075947
