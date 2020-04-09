@@ -4,7 +4,7 @@ def phone(text) :
     phone_re = re.compile(r'''
             ((\(\+\d{3}\)-)|(\+\d{3}-)|(\+\d{3}\s))?  
             # (+977-).....OR...+977...OR..+977 .......OR...none
-            
+
             (((\d{4}-\d{3}-\d{3})|(\d{10}))|(\d{1,3}-\d{5,6}))     
             #10-digit phone number........OR..6-7 digit landline number
             ''',re.VERBOSE)
