@@ -45,7 +45,7 @@ def mail(text) :
 def url(text) :
     url_re = re.compile(r'''
                 ((https://)|(http://))?
-                (www.)?
+                (www\.)
                 ([0-9a-zA-Z-]{5,50})+
                 \.[0-9a-zA-Z-]+
                 (\.[a-zA-Z]{2,4})?
@@ -67,3 +67,6 @@ text = pyperclip.paste()
 ans = url(text)+'\n'+mail(text)+'\n'+phone(text)
 pyperclip.copy(ans)
 print('Following were successfully copied to clipboard :\n\n'+ans)
+
+#for exe file
+input('Press enter to exit.')
