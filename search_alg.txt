@@ -1,7 +1,7 @@
 THINGS NEEDED TO BE DONE:
 
 should be able to get text from clipboard
-find all emails and phone numbers
+find all emails and phone numbers and websites
 store it to clipboard as string line by line
 
 HOW TO DO IT :
@@ -29,3 +29,8 @@ e.g:
 056-560879
 
 +977 9845075947
+
+
+websites e.g. :
+https://www.google.com.np
+google.com

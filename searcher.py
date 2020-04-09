@@ -30,7 +30,7 @@ def mail(text) :
             (\.[a-zA-Z]{2,4})?      #.np or sth
             ''',re.VERBOSE)
     
-    #iterating through each match and appending it to ph_list
+    #iterating through each match and appending it to mail_list
     mail_list = []
     for ans in re.finditer(mail_re, text) :
         mail_list.append(str(ans.group(0)))
@@ -42,8 +42,28 @@ def mail(text) :
         emails = '\n'.join(mail_list)       #converting list into string
         return emails
 
+def url(text) :
+    url_re = re.compile(r'''
+                ((https://)|(http://))?
+                (www.)?
+                ([0-9a-zA-Z-]{5,50})+
+                \.[0-9a-zA-Z-]+
+                (\.[a-zA-Z]{2,4})?
+                            ''',re.VERBOSE)
+    
+    #iterating through each match and appending it to url_list
+    url_list = []
+    for ans in re.finditer(url_re, text) :
+        url_list.append(str(ans.group(0)))
+
+    
+    if len(url_list) == 0 :
+        return 'No url found!'
+    else :
+        urls = '\n'.join(url_list)       #converting list into string
+        return urls
 
 text = pyperclip.paste()
-ans = mail(text)+'\n'+phone(text)
+ans = url(text)+'\n'+mail(text)+'\n'+phone(text)
 pyperclip.copy(ans)
 print('Following were successfully copied to clipboard :\n\n'+ans)
