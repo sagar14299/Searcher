@@ -12,7 +12,7 @@ have a class to put that to
 have different class for email and numbers
 for email :
 should search for words@word.word(.word {optional})
-e.g : name@email.com.np or name@mail.com
+e.g : na-m%e@email.com.np or name@mail.com
 for ph-num :
 should search for 3 nums(optional) as postal code and have either : 4num-3num-3num or : 10nums
 for landline :
@@ -20,8 +20,12 @@ should search for 1 to 2 nums as postal code and have nums that range from 5 to 
 e.g:
 +977-1-4780299
 
-+977-9801-200-111
+(+977)-9801-200-111
 
-+977-9801-200-101
++977-9001-560-101
 
-9845075947
++977 9801-256-111
+
+056-560879
+
++977 9845075947
