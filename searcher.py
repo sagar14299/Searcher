@@ -15,7 +15,7 @@ def phone(text) :
         ph_list.append(str(ans.group(0)))
     
     if len(ph_list) == 0 :
-        return 'No numbers found!'
+        return None
     else :
         ph_nums = '\n'.join(ph_list)        #converting list into string
         return ph_nums
@@ -37,7 +37,7 @@ def mail(text) :
 
     
     if len(mail_list) == 0 :
-        return 'No emails found!'
+        return None
     else :
         emails = '\n'.join(mail_list)       #converting list into string
         return emails
@@ -58,13 +58,31 @@ def url(text) :
 
     
     if len(url_list) == 0 :
-        return 'No url found!'
+        return None
     else :
         urls = '\n'.join(url_list)       #converting list into string
         return urls
 
+#Main part of program
 text = pyperclip.paste()
-ans = url(text)+'\n'+mail(text)+'\n'+phone(text)
+
+ans = '\n'
+if url(text) != None :
+    ans += url(text)+'\n'
+else :
+    print('No url found!')
+
+if mail(text) != None :
+    ans += mail(text)+'\n'
+else :
+    print('No email found!')
+
+if phone(text) != None :
+    ans += phone(text)+'\n'
+else :
+    print('No phone numbers found!')
+
+
 pyperclip.copy(ans)
 print('Following were successfully copied to clipboard :\n\n'+ans)
 

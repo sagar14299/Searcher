@@ -33,4 +33,4 @@ e.g:
 
 websites e.g. :
 https://www.google.com.np
-google.com
+www.nepal.com
